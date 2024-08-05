@@ -9,7 +9,5 @@ for line in resp.iter_lines():
         payload = json.loads(line.decode())
         if payload.get("event") == "message":
             print(json.loads(payload.get("message")))
-        else:
-            print(payload)
 
 print("Exiting...")
